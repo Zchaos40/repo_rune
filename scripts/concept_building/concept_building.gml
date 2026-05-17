@@ -1,5 +1,1 @@
-tile_example={
-	a: function(damage){show_debug_message(damage)},
-	damage:3,
-	triggertypes: ["touched", "forced"]
-}
+example_tile=struct_create(concept_building, ["when_placed"], "When this is placed, destroy this and run a placeholder function.")

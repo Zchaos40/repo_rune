@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"struct_runner",
+  "%Name":"triggering_parser",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"struct_runner",
+  "name":"triggering_parser",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

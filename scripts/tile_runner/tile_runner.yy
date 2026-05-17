@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"struct_runner",
+  "%Name":"tile_runner",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"struct_runner",
+  "name":"tile_runner",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"struct_runner",
+  "%Name":"struct_create",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"struct_runner",
+  "name":"struct_create",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",
