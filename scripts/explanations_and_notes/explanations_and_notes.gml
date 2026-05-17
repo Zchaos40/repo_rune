@@ -36,8 +36,11 @@
 //
 //
 //If action loops into itself enough, maybe make it so that it "overheats" to prevent infinite looping easily. just an idea.
-
-
-
-
+//
+//when a tile gets placed away from the player, it has it's base amount that it costs, and every x tiles away from the player it's placed, it costs 1 more. Maybe dont allow tiles to be placed beneath enemies, or maybe allow it but double the cost. Show this all via colored highlights
+//so, if it costs 1, its a deep green, 3, maybe a lighter green, 5, yellow, 10, deep red, and no highlight if it's too expensive. Maybe do it in a different way, with the color representing how much mana you will have left after placing the rune.
+//
+//We have to keep struct_id implemented, it's too much of an asset. 
+//
+//
 

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"checklist_neverrun",
   "parent":{
-    "name":"Rune game",
-    "path":"Rune game.yyp",
+    "name":"project_management_and_expirimentation",
+    "path":"folders/project_management_and_expirimentation.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

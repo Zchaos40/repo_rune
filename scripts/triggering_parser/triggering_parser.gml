@@ -20,5 +20,4 @@ function triggering_parser(_x, _y, preaction, postaction){ //needs a before and 
 			tile_runner(global.fgrid[_x][_y], _x, _y)
 		}
 	}
-	
 }
