@@ -1,26 +1,27 @@
-function place_tile(tile,place_x,place_y){
+function place_tile(tile,place_x,place_y,orientation,by_player){//by_player should be true when the tile is being placed by the player, false otherwise.
 	//we need:
 	//global.playerlocation
 	//global.energy
 	//global.placement_distance
 	//I'm thinking: within placement distance=1x, within 2x placement distance=1.5x cost, rounded up, within 3x placement distance=2x cost
 	var energy_cost=30 //people being able to place things anywhere if they have 30 energy or more is an intentional decision that will be interesting to dedicated players. its a cool secret in my opinion.
-	var distance=abs(place_x-global.player_location[0])+abs(place_y-global.player_location[1])
-	if distance <= global.placement_distance*3{
+	var distance=abs(place_x-global.player._x)+abs(place_y-global.player._y)
+	if distance <= global.player.placement_distance*3{
 		energy_cost=2*tile.cost//Shit we need to add tilecost dont we
 		if distance <= global.placement_distance*2{
 			energy_cost=floor(1.5*tile.cost)
-			if distance <= global.placement_distance{
+			if distance <= global.player.placement_distance{
 				energy_cost=tile.cost
 			}
 		}
 	}
-	if global.energy>=energy_cost{
+	if global.player.energy>=energy_cost or by_player==false{
 		var placed_tile=struct_clone(tile)
 		placed_tile._x=place_x
 		placed_tile._y=place_y
-		global.fgrid[place_x][place_y]=placed_tile//I feel like theres something else i needed to do with this but i forgor 
-		global.energy-=energy_cost
+		placed_tile._direction=orientation
+		global.fgrid[place_x][place_y]=variable_clone(placed_tile)//I feel like theres something else i needed to do with this but i forgor 
+		if by_player{global.energy-=energy_cost}
 		// maybe also put a different sound effect here.
 	}
 	else{

@@ -100,8 +100,9 @@
 //
 //I'm making a function that has anything on anygrid reverify its internally stored location. As in, it finds its id on the pgrid and fgrid and then sets its internal values to those locations. It'll check both the pgrid and the fgrid for itself.
 //
-//
-//
+//I should add some puzzle challenges at some point
+//that would be kinda cool
+//yeah
 //
 //
 //

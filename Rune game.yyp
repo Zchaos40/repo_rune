@@ -27,6 +27,8 @@
   "name":"Rune game",
   "resources":[
     {"id":{"name":"main","path":"objects/main/main.yy",},},
+    {"id":{"name":"temp_button_2","path":"objects/temp_button_2/temp_button_2.yy",},},
+    {"id":{"name":"temp_button","path":"objects/temp_button/temp_button.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"action","path":"scripts/action/action.yy",},},
     {"id":{"name":"checklist_neverrun","path":"scripts/checklist_neverrun/checklist_neverrun.yy",},},
@@ -55,6 +57,7 @@
     {"id":{"name":"z_display_alt","path":"scripts/z_display_alt/z_display_alt.yy",},},
     {"id":{"name":"z_display","path":"scripts/z_display/z_display.yy",},},
     {"id":{"name":"blank_sprite","path":"sprites/blank_sprite/blank_sprite.yy",},},
+    {"id":{"name":"button","path":"sprites/button/button.yy",},},
     {"id":{"name":"coiny_thing_1","path":"sprites/coiny_thing_1/coiny_thing_1.yy",},},
     {"id":{"name":"coiny_thing_2","path":"sprites/coiny_thing_2/coiny_thing_2.yy",},},
     {"id":{"name":"coiny_thing_3","path":"sprites/coiny_thing_3/coiny_thing_3.yy",},},

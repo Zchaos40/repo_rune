@@ -1,7 +1,5 @@
 //graphics/audio:
-//
-//tile triggers are white text, functions are black text. Use 128,128,128 RGB(true center gray) as the background. just an idea.
-//
+//We need a font. ideally a fanta font. a fanta fonta, if you will.
 //add sound effects to place_tile
 //
 //
@@ -17,6 +15,8 @@
 
 
 
+
+
 //UI elements:
 //
 //
@@ -25,6 +25,8 @@
 //
 //
 //
+
+
 
 
 
@@ -47,8 +49,8 @@
 
 
 //current/temp/the code itself:
-//fix errors
-//theres a small thing with the direction of the push tile, fix that.
+//test having multiple tiles on the board
+//make some sort of tile burnout thing that prevents infinite loops
 //code some sort of enemy type thing on the pgrid that moves around at the end of the turn.
 //
 //

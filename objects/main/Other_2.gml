@@ -40,7 +40,7 @@ global.pgrid[global.player._x][global.player._y]={
 global.turn_ending=false
 
 var testing_tile=tile_list("push_tile")
-testing_tile._x=4
-testing_tile._y=4
-testing_tile._direction=0
-global.fgrid[4][4]=testing_tile
+place_tile(testing_tile,7,7,0,false)
+place_tile(testing_tile,7,6,3,false)
+place_tile(testing_tile,6,6,0,false)
+place_tile(testing_tile,6,5,3,false)
