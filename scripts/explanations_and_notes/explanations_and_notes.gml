@@ -42,5 +42,150 @@
 //
 //We have to keep struct_id implemented, it's too much of an asset. 
 //
+//remember that negative numbers insert things from the end. Could be useful in many circumstances.
 //
-
+//Seeing how weird everything is, we might want to always keep the grid the player is on and all of the ones in front of and behind it in memory at all times. Only run the ones that they're currently on though.
+//paths between rooms could be like push tiles that only function after a battle is completed. then, to go backwards, you would just need to get pushed back/teleported back 2. Yes very cool, like concept.
+//
+//
+//We need to make it so that when runes trigger they trigger all at the same time, so that read order doesn't mess stuff up.
+//Essentially just make a list of triggered tiles and then execute all changes at once.
+//
+//Tiles also have to store their location for convenience.
+//
+//We may or may not decide to store the triggering functions inside of the tiles.
+//
+//Triggering the tiles all at once may sacrifice some things and potentially reduce the amount of triggers, but I think that in the long run it's a good idea.
+//
+//Oh ho ho ho I just realized that I could leave in, as a fun little secret, that if you have more than, say, 30 energy, you could place a tile anywhere on the board.
+//
+//
+//ok so decisions(maybe change): 
+//the player will be a global struct
+//the global struct will store the players position on the board
+//that position will have something there that is essentially a gateway for the player struct, since i don't want to store the player struct on the board. that could be inconvenient.
+//
+//
+//The player is going to have to have some basic spells and stuff that let them move themselves, enemies and stuff
+//
+//This game works better as a tactical 1v1 than a turn based kill everything game. That helps me out a lot
+//
+//I think that we need to include the pgrid as a part of the triggering system ):
+//Its the only way
+//
+//Yeah, and we'll just make them both in struct create, maybe using optional variables.
+//
+//Older stuff i typed in a stupid place:
+// only 1 thing that gets placed (runes) but they can also do things like "when this is placed, do x. destroy this rune." in order to make things simpler.
+//Peglin like navigation kinda, but with the right setup, you can go BACKWARDS. Cool amiright?
+//Y'know perks in other games and stuff, and endless mode in other games and stuff? Well what if we gave players perks in endless mode that basically broke some aspect of the game. We could call them endless boons. Endless would get exponentially harder, but the player would get access to things like uncapped perks on runes, saving and loading runs(basically implemented savescumming), total locational control, etc.
+//The walls of arenas could be broken, but it would look clearly unintended and impossible.
+//At the edge of each arena could be a void, and you could cross the void into an alternate reality, but it wouldn't look possible.
+//SO: Moderately crazy idea, but it could make or break our game. Make tiles like noita wands, in that you can freely organize them and they have a limited capacity that differs from tile to tile. Triggertypes could also be something that is slightly, but not very modular! It would work so well! Yeah.
+//With locking mechanics, we could also have like a key that you could buy in the shop to unlock one thing specifically.
+//
+//all of the f/pgrid triggered functions need to have their object inputted into them. i think i explain why in tile_runner. idk. I should be able to figure it out.
+//
+//movement will be done 1 tile at a time.
+//
+//before you start a run, you could mix and match different characteristics of different characters you unlock. maybe make this an endgame thing. like the last character unlock.
+//so basically you could take like the movement of character b and the special ability of character a and stuff like that or something
+//
+//ok so the way that we're going to do it is that we'll have a function that syncs the player on the board and the global player variable
+//and then we'll run it whenever we need to.
+//
+//The noones should just not be displayed and the background should be non repeating, it would make more sense
+//
+//store the tiles functions in one mega-script, have a different script that turns those functions into tiles.
+//
+//I'm making a function that has anything on anygrid reverify its internally stored location. As in, it finds its id on the pgrid and fgrid and then sets its internal values to those locations. It'll check both the pgrid and the fgrid for itself.
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//

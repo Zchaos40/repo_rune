@@ -1,1 +1,0 @@
-example_tile=struct_create(concept_building, ["when_placed"], "When this is placed, destroy this and run a placeholder function.")

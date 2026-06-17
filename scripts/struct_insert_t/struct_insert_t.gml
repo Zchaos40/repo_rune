@@ -4,4 +4,4 @@ function struct_insert_t(input_struct, new_thing){
 	}
 }
 
-//this may not get used except for tile creation, uncertain.
+//This may be obsolete.

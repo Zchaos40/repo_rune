@@ -1,3 +1,35 @@
-function place_tile(){
-
+function place_tile(tile,place_x,place_y){
+	//we need:
+	//global.playerlocation
+	//global.energy
+	//global.placement_distance
+	//I'm thinking: within placement distance=1x, within 2x placement distance=1.5x cost, rounded up, within 3x placement distance=2x cost
+	var energy_cost=30 //people being able to place things anywhere if they have 30 energy or more is an intentional decision that will be interesting to dedicated players. its a cool secret in my opinion.
+	var distance=abs(place_x-global.player_location[0])+abs(place_y-global.player_location[1])
+	if distance <= global.placement_distance*3{
+		energy_cost=2*tile.cost//Shit we need to add tilecost dont we
+		if distance <= global.placement_distance*2{
+			energy_cost=floor(1.5*tile.cost)
+			if distance <= global.placement_distance{
+				energy_cost=tile.cost
+			}
+		}
+	}
+	if global.energy>=energy_cost{
+		var placed_tile=struct_clone(tile)
+		placed_tile._x=place_x
+		placed_tile._y=place_y
+		global.fgrid[place_x][place_y]=placed_tile//I feel like theres something else i needed to do with this but i forgor 
+		global.energy-=energy_cost
+		// maybe also put a different sound effect here.
+	}
+	else{
+		//dont do anything and maybe add like a sound effect or something i guess? checklist said so
+	}
 }
+
+//We may need to add a similar function that does this independently of the player.
+//or we could just use an optional input? Idk
+
+//also maybe make it cost one more if it's being placed beneath something. That sounds balanced.
+//actually nevermind. theres nothing that overpowered about being able to do that anyways since most things wont trigger immediately when placed.
