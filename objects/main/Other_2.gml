@@ -44,3 +44,14 @@ place_tile(testing_tile,7,7,0,false)
 place_tile(testing_tile,7,6,3,false)
 place_tile(testing_tile,6,6,0,false)
 place_tile(testing_tile,6,5,3,false)
+
+
+place_tile(testing_tile,1,1,1,false)
+place_tile(testing_tile,2,1,2,false)
+place_tile(testing_tile,2,2,3,false)
+place_tile(testing_tile,1,2,0,false)
+
+
+place_tile(tile_list("arrow_tile"),3,1,3,false)
+place_tile(tile_list("arrow_tile"),0,5,0,false)
+place_entity(tile_list("gremlin"),7,3,2)

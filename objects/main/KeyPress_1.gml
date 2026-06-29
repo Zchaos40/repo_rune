@@ -10,3 +10,10 @@ if keyboard_check_pressed(ord("S")){
 if keyboard_check_pressed(ord("A")){
 	action(player_move,[3])
 }
+
+if keyboard_check_pressed(ord("K")){
+	save()
+}
+if keyboard_check_pressed(ord("L")){
+	load()
+}

@@ -1,4 +1,4 @@
-function struct_create(_functions, _triggers, _description, _image=coiny_thing, _cost=noone, __x=noone, __y=noone, __direction=0){//eventually will need to probably make it pass in all of the stat values, maybe? might not need stats
+function struct_create(_functions, _triggers, _description, _image=coiny_thing, _cost=noone, __x=noone, __y=noone, __direction=0, trigger_max=noone, times_triggered=noone){//eventually will need to probably make it pass in all of the stat values, maybe? might not need stats
 	var new_struct={
 		order: _functions,//Will contain a list of the functions themselves in order, I didn't think about it hard enough to realize that that's a lot smarter.
 		trigger: _triggers, //may or may not change this to be more modular, somehow. basically the same as the functions.
@@ -16,6 +16,10 @@ function struct_create(_functions, _triggers, _description, _image=coiny_thing, 
 	global.struct_IDer++
 	if _cost!=noone{
 		new_struct.cost=_cost
+	}
+	if times_triggered!=noone and trigger_max!=noone{
+		new_struct.times_triggered=times_triggered
+		new_struct.trigger_max=trigger_max
 	}
 	return(new_struct)
 }

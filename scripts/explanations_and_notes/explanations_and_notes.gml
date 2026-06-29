@@ -104,12 +104,12 @@
 //that would be kinda cool
 //yeah
 //
+//Methods for tile burnout:
+//1: Check previous gamestates: if match, stop. - Would be ideal, but potentially a nightmare to code. wouldn't always work either.
+//2: Give certain tiles a hidden triggermax variable. - It would be inconvenient to code, but would work quite well.
+//3: stop triggers after a certain amount of loops on triggering_parser(about 100) maybe include that amount as a setting ingame. - Could break messed up non-infinite setups, which could be bad and make it have demoncrawl-type infinite gameplay rather than noita god run gameplay, which would suck.
 //
-//
-//
-//
-//
-//
+//I think that we'll go with method 2. maybe cause a triggermax thing to trigger some sort of response from the game.
 //
 //
 //

@@ -20,3 +20,4 @@ function location_verifier(_self){
 		}
 	}
 }
+//This function basically just makes a tile at a location set its internal location variables to the correct numbers.
