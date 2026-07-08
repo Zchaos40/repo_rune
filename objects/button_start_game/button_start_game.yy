@@ -1,11 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"temp_button",
+  "%Name":"button_start_game",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"temp_button",
+  "name":"button_start_game",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"button",
-    "path":"sprites/button/button.yy",
+    "name":"main_menu_start",
+    "path":"sprites/main_menu_start/main_menu_start.yy",
   },
   "spriteMaskId":null,
   "visible":true,

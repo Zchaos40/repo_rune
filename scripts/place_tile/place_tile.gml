@@ -24,7 +24,7 @@ function place_tile(tile,place_x,place_y,orientation,by_player){//by_player shou
 		placed_tile._y=place_y
 		placed_tile._direction=orientation
 		global.fgrid[place_x][place_y]=variable_clone(placed_tile)//I feel like theres something else i needed to do with this but i forgor 
-		if by_player{global.energy-=energy_cost}
+		if by_player{global.player.energy-=energy_cost}
 		// maybe also put a different sound effect here.
 	}
 	else{

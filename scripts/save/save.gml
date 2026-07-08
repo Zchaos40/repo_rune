@@ -2,7 +2,8 @@ function save(){
 	var _save={
 	player:global.player,
 	pgrid:global.pgrid,
-	fgrid:global.fgrid
+	fgrid:global.fgrid,
+	struct_IDer:global.struct_IDer
 	}
 	var _string=json_stringify(_save)
 	var _file = file_text_open_write("save.txt")

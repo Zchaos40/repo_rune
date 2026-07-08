@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"display_unplaced_tile",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"display_unplaced_tile",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

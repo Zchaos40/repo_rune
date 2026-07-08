@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"temp_button",
+  "%Name":"button_quit_game",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"temp_button",
+  "name":"button_quit_game",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"button",
-    "path":"sprites/button/button.yy",
+    "name":"main_menu_quit",
+    "path":"sprites/main_menu_quit/main_menu_quit.yy",
   },
   "spriteMaskId":null,
   "visible":true,

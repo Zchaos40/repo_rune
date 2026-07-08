@@ -17,3 +17,16 @@ if keyboard_check_pressed(ord("K")){
 if keyboard_check_pressed(ord("L")){
 	load()
 }
+if keyboard_check_pressed(ord("E")){
+	global.player.card_selected_rotation++
+	if global.player.card_selected_rotation==4{
+		global.player.card_selected_rotation=0
+	}
+}
+if keyboard_check_pressed(ord("Q")){
+	global.player.card_selected_rotation--
+	if global.player.card_selected_rotation==-1{
+		global.player.card_selected_rotation=3
+	}
+}
+if keyboard_check_pressed(vk_escape){room_goto(main_menu)}

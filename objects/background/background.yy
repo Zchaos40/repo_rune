@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"temp_button",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"background",
+  "eventList":[],
   "managed":true,
-  "name":"temp_button",
+  "name":"background",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"button",
-    "path":"sprites/button/button.yy",
+    "name":"background_sprite",
+    "path":"sprites/background_sprite/background_sprite.yy",
   },
   "spriteMaskId":null,
   "visible":true,

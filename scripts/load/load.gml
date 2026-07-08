@@ -5,6 +5,7 @@ function load(){
 		global.player=_load.player
 		global.pgrid=_load.pgrid
 		global.fgrid=_load.fgrid
+		global.struct_IDer=_load.struct_IDer
 		file_text_close(_file)
 	}
 }

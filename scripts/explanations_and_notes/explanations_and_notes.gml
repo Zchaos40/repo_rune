@@ -111,49 +111,49 @@
 //
 //I think that we'll go with method 2. maybe cause a triggermax thing to trigger some sort of response from the game.
 //
+//Brainstorming what to work on next:
+//Main menu
+//actual run mechanics
+//actual graphics
+//
+//I think that we've gotta make a main menu next so that we have a reasonable entry point for files and characters.
+//main menu things:
+//start run(needs options in it) #1
+//load run #2
+//codex of tiles and enemies(dont need right away, this is a later on thing) #5 (probably after a lot of other work on the game)
+//profiles(not necessarily necessary) #anytime
+//settings #4
+//quit #3
+//some sort of fun background thing, like in conquest of go #anytime
+//
+//How will we keep track of what is currently being done?
+//We could use a global.current_mode type of variable
+//We could use rooms, but like... i dont want to have to copy the code to each room, but i guess i could.
+//rooms would work well if they actually worked, but i have no idea if they would.
+//If we're going to try rooms, we've gotta commit it beforehand.
+//
+//rooms vs mode:
+//rooms has easier buttons
+//mode makes it so that i dont havae to use rooms
+//mode means no copying the code everywhere
+//rooms makes me better at coding
+//If rooms works with the code object in a way that I dont think is objectionable, i guess we can use it.
+//About to commit.
 //
 //
+//We need to add playable tiles/cards/whatever.
+//So we need to give the player a hand and a deck. 2 decks are needed, since tiles in your hand might somehow get modified during the combat.
+//We need to make decisions about how hands will work and stuff.
+//There will also likely have to be a draw, discard, and exhaust pile, unless we do some real fucked up shit like we did in 2048.
+//We also have to make sure that we never implement a mechanic that encourages repetitive gameplay, like that reroll your hand thing we did in 2048. maybe it could be reasonable as a tile effect.
 //
+//hand, deck, etc. should be stored in overall player.
+//have decided against the maindeck + deck approach in favor of deck, draw_pile, discard_pile, & exhaust pile.
 //
+//When clicking with the mouse, instead of checking its location, look at the location of everything else to see what it clicked.
+//store all locations of things. When left mouse pressed, mark all things that it is greater than the top left of and less than the bottom right of. Then run the thing for whatever its both of. yeah.
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+//The stuff that has a bunch of smaller things, like placing a tile, will be counted as one big click by the thing (just have one thing that checks if the board gets clicked.) and then get further interpreted by other functions. 
 //
 //
 //
