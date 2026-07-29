@@ -8,6 +8,9 @@ function button_location_manager(){
 	}
 	array_push(global.locations_list,hand)
 	array_push(global.locations_list,["board",0,0,1000,1000])
+	array_push(global.locations_list,["end_turn",1824,64,1924,164])
+	array_push(global.locations_list,["dev_mode",1824,164,1924,264])
+	array_push(global.locations_list,["draw_card",1824,264,1924,364])
 }
 
 //This function will update the global.locations_list when it is run to match what is currently on the screen and stuff.

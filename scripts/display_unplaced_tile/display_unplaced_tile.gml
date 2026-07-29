@@ -11,3 +11,5 @@ function display_unplaced_tile(){
 		}
 	}
 }
+//yeah this just displays your hand
+//should've called it display_hand but whatever ig

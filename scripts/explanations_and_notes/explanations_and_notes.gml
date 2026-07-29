@@ -155,9 +155,63 @@
 //
 //The stuff that has a bunch of smaller things, like placing a tile, will be counted as one big click by the thing (just have one thing that checks if the board gets clicked.) and then get further interpreted by other functions. 
 //
+//Do we want to add artifacts or perks to the game?
+//I dont think so. artifacts and perks kinda defeat the point of the board being your build and strength.
+//
+//The player should be able to place like boulders and shit on the board. maybe to like fuel loop engines or something.
+//It has a lot of use cases and adds variety to the game. I think it would be positive and good for the game.
+//
+//I had this idea for an artifact that I have not been able to get out of my head so I thought i'd write it down.
+//It would give the player full control of global.struct_IDer.
+//They would have access to it at any point by typing in a code that would consist of like up up left right left up down right.
+//This code would be randomized on each copy of the game. It would only be accessible by datamining the game with undertale mod tool.
+//We would also include an area that explains this artifact in its entirety, and before this area, there would be a boss that dies when you input this code.
+//The boss would explain that theres a code that you have to input to beat it and that this code could be found in the game's files.
+//This way, only people who were very dedicated to the game and had access to the code would be able to access this. It would, of course, be buggy.
+//But it would be the player's job to deal with and bypass this bugginess, and they would know how, since they have access to the code.
+//
+//What do we need for a map and how do we want to make it?
+//We'll have 2 arrays, With 1 representing the map locations and the other representing the pathways.
+//The locations will all have visible types(enemy, elite, shop, etc.) and then internal specific types of encounters(gremlin horde, gay shop, etc.)
+//All of those internal labels will correspond to functions that generate them.
+//They will almost always have an aspect of randomness to them, with them being guided randomness. 
+//example: gremlin horde spawns a lot of gremlins randomly in the rightmost area of the board, and then spawns a few lava pools randomly throughout the board.
+//After thinking about it, making it so that you can go backwards would be potentially annoying to implement on a basic level. Maybe eventually though.
+//how will the second array represent the pathways? maybe have each spot on the array have a random number from 0-8, get that number in binary,
+//and so youll have a number from 000 to 111. the 111 means 3 paths, 110 means only the two top paths, 010 means only the middle path, etc.
+//We could make it so that this always works and that you can go backwards be default, but because its like that, we can have it be like the rebel fleet in ftl!!!!!!
+//how would we have that do up and down? I guess make it be 4 numbers, with the fourth number representing south.
+//Im not sure what the ideal sizing of a map like that would be. maybe 4x10? Lets go with 4x10 for now.
+//I think, at the start of the map, each thing's pathway will just be a random number from 0000 to 1111(0 to 15), but
+//if the whole map cannot be flood filled(as in, something is cut off with no other access), It'll randomly add 1/2/4/8 to like 5 random nodes and keep doing this until it works.(also anything above 1111/15 just gets rounded down to 15.)
+//Maybe also do that if it takes the flood fill 15 or more turns to get to the final row.
+//Regarding the "rebel fleet" thing that Im planning to implement, I think that it'll probably be like a flood fill that triggers once every 2 turns.
+//It will, of course, likely have like a 2-3 turn delay from the start so that the player doesnt have to rush away from the beginning immediately.
+//This means that each map will take like at most (15x2)+3 turns, and usually closer to (10x2)+3 turns. slightly smaller than that because I doubt
+//that most people will wait until the last second to go to the "sector exit" or boss or whatever. I feel like 20-30 turns per round is very reasonable
+//So, we need to code two arrays, the contents of those two arrays(probably the navigation array first, just leave the events array empty for now), some weird
+//ass binary bullshit, a flood fill algorithm for this map, and something that lets you move between the sectors on this map.
 //
 //
 //
+//
+//
+//
+//
+//Lets say that we have a tile that waves itself through the board all at once. We want it doing that to be visible to the player.
+//Maybe make it so that whenever a tile triggers there's a 5 millisecond(maybe change this amount) delay before the next group of tiles trigger?
+//By this i mean that we would put a delay somewhere in tile_runner so that whenever theres a new list of tiles that get triggered the player can see it.
+//I feel like implementing this more than i feel like implementing a map right now.
+//So; this actually doesn't work the way that I wanted it to, but I found another way to do it with the advice of claude. To any dataminers, first of all: I do not promote generative ai, but I feel like using ai once or twice a week to help me figure out something confusing is reasonable and good. second of all: hi uwu :3
+//
+//
+//
+//shops will have exclusive tiles that trigger the tile that they're pointing at, and those tiles will buy the tile they're pointing at. 
+//you could also do some weird ass bullshittery in order to buy the trigger when clicked thing.
+//
+//The game should keep track of all of the actions that you take, those actions being stuff like moving, placing a tile, drawing a card, and ending your turn.
+//
+//drawing a card should cost 1 energy, then two energy, then 3 energy, etc.(maybe capping at 5 energy.) each turn you should discard your hand and then draw 5 more cards for free.
 //
 //
 //

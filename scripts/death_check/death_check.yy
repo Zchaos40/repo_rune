@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"enemy_create",
+  "%Name":"death_check",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"enemy_create",
+  "name":"death_check",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

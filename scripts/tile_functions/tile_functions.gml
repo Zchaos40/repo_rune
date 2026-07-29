@@ -23,6 +23,18 @@ function arrow_tile_function(_self){
 	if global.pgrid[_self._x][_self._y]._direction=3{place_tile(tile_list("push_tile"),_self._x-1,_self._y,global.pgrid[_self._x][_self._y]._direction,false)}
 }
 
+function damage_tile_function(_self){
+	global.pgrid[_self._x][_self._y]._health--
+	player_sync(false)
+}
+
+
+
+
+
+
+
+
 function gremlin_entity_function(_self){
 	var x_priority=false
 	var x_difference = _self._x-global.player._x
@@ -51,3 +63,4 @@ function gremlin_entity_function(_self){
 }
 //ok so im not gonna fix it for now (too lazy) BUT this guy can walk off the map and his ai lets him so yeah
 //female version would be gremlinette
+

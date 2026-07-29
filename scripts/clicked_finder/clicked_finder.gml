@@ -16,7 +16,7 @@ function clicked_finder(){
 		show_debug_message("how the fuck did you press 2 buttons at once? Sorry for the bad code.")
 		return
 	}
-	if buttons_pressed==[]{return(noone)}
+	if array_length(buttons_pressed)==0{return(noone)}
 	else if array_length(buttons_pressed) > 0 {
 		return buttons_pressed[0];
 	}

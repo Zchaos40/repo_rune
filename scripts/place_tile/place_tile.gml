@@ -19,15 +19,21 @@ function place_tile(tile,place_x,place_y,orientation,by_player){//by_player shou
 		}
 	}
 	if global.player.energy>=energy_cost or by_player==false{
-		var placed_tile=struct_clone(tile)
+		var placed_tile=struct_clone(tile)//struct clone is here. I think that this works perfectly as intended.
 		placed_tile._x=place_x
 		placed_tile._y=place_y
 		placed_tile._direction=orientation
 		global.fgrid[place_x][place_y]=variable_clone(placed_tile)//I feel like theres something else i needed to do with this but i forgor 
-		if by_player{global.player.energy-=energy_cost}
+		if by_player{
+			array_push(global.player.discard_pile, global.player.hand[global.player.card_selected_index])
+			array_delete(global.player.hand,global.player.card_selected_index,1)
+			global.player.card_selected_index=-1
+			global.player.energy-=energy_cost
+		}
 		// maybe also put a different sound effect here.
 	}
 	else{
+		
 		//dont do anything and maybe add like a sound effect or something i guess? checklist said so
 	}
 }
