@@ -1,5 +1,8 @@
 window_set_fullscreen(false)
 global.devmode=true //grants some stuff that makes testing easier. turn off sometimes.
+global.base_mode=["board"]
+global.alt_mode=[noone]
+
 randomise()
 if global.start_type=="start"{//the other start type is load. this is to make it boot the way we want when we press different buttons. May be temporary.
 	global.struct_IDer=300 //this is necessary for differentiating.
@@ -76,9 +79,6 @@ global.phantom_map=variable_clone(mapframe)//this is used to help generate the m
 
 //temporary and for testing purposes
 map_initializing()
-map_flooder(0,0)
-show_debug_message(global.phantom_map)
-show_debug_message(global.map[1])
 
 
 global.turn_ending=false

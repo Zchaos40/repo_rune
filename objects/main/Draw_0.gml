@@ -1,5 +1,5 @@
-//draw_board_temp()
-map_display()
+if global.base_mode[0]=="board"{draw_board_temp()}
+if global.base_mode[0]=="map"{map_display()}
 
 
 

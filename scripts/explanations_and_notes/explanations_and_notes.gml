@@ -127,7 +127,7 @@
 //some sort of fun background thing, like in conquest of go #anytime
 //
 //How will we keep track of what is currently being done?
-//We could use a global.current_mode type of variable
+//We could use a global.base_mode[0] type of variable
 //We could use rooms, but like... i dont want to have to copy the code to each room, but i guess i could.
 //rooms would work well if they actually worked, but i have no idea if they would.
 //If we're going to try rooms, we've gotta commit it beforehand.
@@ -176,15 +176,15 @@
 //All of those internal labels will correspond to functions that generate them.
 //They will almost always have an aspect of randomness to them, with them being guided randomness. 
 //example: gremlin horde spawns a lot of gremlins randomly in the rightmost area of the board, and then spawns a few lava pools randomly throughout the board.
-//After thinking about it, making it so that you can go backwards would be potentially annoying to implement on a basic level. Maybe eventually though.
-//how will the second array represent the pathways? maybe have each spot on the array have a random number from 0-8, get that number in binary,
-//and so youll have a number from 000 to 111. the 111 means 3 paths, 110 means only the two top paths, 010 means only the middle path, etc.
-//We could make it so that this always works and that you can go backwards be default, but because its like that, we can have it be like the rebel fleet in ftl!!!!!!
-//how would we have that do up and down? I guess make it be 4 numbers, with the fourth number representing south.
-//Im not sure what the ideal sizing of a map like that would be. maybe 4x10? Lets go with 4x10 for now.
-//I think, at the start of the map, each thing's pathway will just be a random number from 0000 to 1111(0 to 15), but
-//if the whole map cannot be flood filled(as in, something is cut off with no other access), It'll randomly add 1/2/4/8 to like 5 random nodes and keep doing this until it works.(also anything above 1111/15 just gets rounded down to 15.)
-//Maybe also do that if it takes the flood fill 15 or more turns to get to the final row.
+//irrelevant//After thinking about it, making it so that you can go backwards would be potentially annoying to implement on a basic level. Maybe eventually though.
+//done//how will the second array represent the pathways? maybe have each spot on the array have a random number from 0-8, get that number in binary,
+//done//and so youll have a number from 000 to 111. the 111 means 3 paths, 110 means only the two top paths, 010 means only the middle path, etc.
+//done//We could make it so that this always works and that you can go backwards be default, but because its like that, we can have it be like the rebel fleet in ftl!!!!!!
+//done//how would we have that do up and down? I guess make it be 4 numbers, with the fourth number representing south.
+//kindarelevant//Im not sure what the ideal sizing of a map like that would be. maybe 4x10? Lets go with 4x10 for now.
+//done//I think, at the start of the map, each thing's pathway will just be a random number from 0000 to 1111(0 to 15), but
+//irrelevant//if the whole map cannot be flood filled(as in, something is cut off with no other access), It'll randomly add 1/2/4/8 to like 5 random nodes and keep doing this until it works.(also anything above 1111/15 just gets rounded down to 15.)
+//kindarelevant//Maybe also do that if it takes the flood fill 15 or more turns to get to the final row.
 //Regarding the "rebel fleet" thing that Im planning to implement, I think that it'll probably be like a flood fill that triggers once every 2 turns.
 //It will, of course, likely have like a 2-3 turn delay from the start so that the player doesnt have to rush away from the beginning immediately.
 //This means that each map will take like at most (15x2)+3 turns, and usually closer to (10x2)+3 turns. slightly smaller than that because I doubt
@@ -214,18 +214,18 @@
 //drawing a card should cost 1 energy, then two energy, then 3 energy, etc.(maybe capping at 5 energy.) each turn you should discard your hand and then draw 5 more cards for free.
 //
 //
+//I have an idea, ok? for the modes and stuff.
+//We'll have global.basemode, which will be essentially the bottom layer of the display. 
+//then, we'll have global.altmode, which will control whatever displays on top of it.
+//if global.altmode displays anything, we'll stop the game from applying any of the bottom layer buttons. 
+//all of the global.altmode stuff will cover like the entirety of the middle of the screen and nothing else.
+//so itll be like, we'll be in combat. and then we can press the escape key to pop up the altmode of the menu.
+//for submodes of things, we'll unfortunately have to make different variables i think.
+//ACTUALLY NVM. Had an idea. make the modes all contained in lists. then we'll always look at global.base/altmode[0] for the general stuff, but we can also
+//go to global.base/altmode[1] or something like that for submodes or anything. this way we can be in combat, go into some sort of weird submode for some reason,
+//and then transition seamlessly back to combat. yes. i like this.
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+//add a silly mode to the settings at some point. make it so that silly mode just disables some of the protections from lag and bugginess. make it clear that silly mode is not cheating.
 //
 //
 //

@@ -40,6 +40,12 @@ function clicked_interpreter(){
 		draw_card()
 	}
 	
+	if button_pressed=="switch_modes"{
+	var previous_mode=variable_clone(global.base_mode[0])
+	if previous_mode="map"{global.base_mode[0]="board"}
+	if previous_mode="board"{global.base_mode[0]="map"}
+	}
+	
 	if button_pressed==noone{
 		global.player.card_selected_index= -1
 		//here you should just like reset everything that happens when you click something
